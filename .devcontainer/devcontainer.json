@@ -1,0 +1,11 @@
+{
+  "name": "Laravel Codespace",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [80],
+  "postCreateCommand": "composer install",
+  "postStartCommand": "php artisan serve --host=0.0.0.0",
+  "postAttachCommand": "composer install",
+  "overrideCommand": false,
+  "remoteUser": "codespace",
+  "workspaceMount": "source=/workspace,target=/workspace,type=bind,consistency=cached"
+}
